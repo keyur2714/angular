@@ -1,0 +1,36 @@
+<h1>{{title | lowercase}}</h1>
+<p>
+{{title | uppercase}}
+</p> 
+<br/>
+{{ city | welcome : 'city'}} <br/>
+{{ name | welcome : 'name'}}
+{{ city | welcome : 'city' | formatstring : ' ' : '*'}} 
+
+<br/>
+{{book}}
+{{book | json}}
+<pre>{{book | json}}</pre>
+
+{{ city | repeat : 10 }}
+<br />
+{{today}}
+<br />
+{{ today | date :'dd/MMM/yyyy hh:mm:ss a' | uppercase}}
+
+<br/>
+
+{{ today | date :'dd/MM/yyyy'}}
+
+<br />
+<pre>
+{{person | json}}
+</pre>
+<br/>
+{{person.name | welcome : 'name'}}
+
+<ul>
+    <li *ngFor="let status of statusList">
+        <span [class]="status|statusconvert">{{status | lowercase}}</span>
+    </li>
+</ul>
